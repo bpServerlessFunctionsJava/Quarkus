@@ -10,9 +10,13 @@ public class TestFunction {
     @Inject
     PersonService service;
 
+    @Inject
+    EmployeeRepository employeeRepository;
+
     @Funq()
-    public List<Employee> getEmployees() {
-        return service.getEmployees();
+    public Iterable<Employee> getEmployees() {
+        employeeRepository.saveAll(service.getEmployees());
+        return employeeRepository.findAll();
     }
 
     /*@Funq
