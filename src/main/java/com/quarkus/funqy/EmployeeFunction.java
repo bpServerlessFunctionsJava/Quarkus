@@ -3,12 +3,11 @@ package com.quarkus.funqy;
 import io.quarkus.funqy.Funq;
 
 import javax.inject.Inject;
-import java.util.List;
 
-public class TestFunction {
+public class EmployeeFunction {
 
     @Inject
-    PersonService service;
+    EmployeeService service;
 
     @Inject
     EmployeeRepository employeeRepository;
@@ -18,14 +17,4 @@ public class TestFunction {
         employeeRepository.saveAll(service.getEmployees());
         return employeeRepository.findAll();
     }
-
-    /*@Funq
-    public String toUpperCase(String name){
-        return name.toUpperCase();
-    }
-
-    @Funq
-    public String toLowerCase(String name){
-        return name.toLowerCase();
-    }*/
 }
