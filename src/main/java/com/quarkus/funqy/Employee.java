@@ -2,7 +2,7 @@ package com.quarkus.funqy;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "EmployeeQuarkus")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
