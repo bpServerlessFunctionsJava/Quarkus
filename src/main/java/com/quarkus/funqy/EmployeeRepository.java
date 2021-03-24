@@ -2,8 +2,9 @@ package com.quarkus.funqy;
 
 import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
+import javax.enterprise.context.ApplicationScoped;
 
+@ApplicationScoped
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 }

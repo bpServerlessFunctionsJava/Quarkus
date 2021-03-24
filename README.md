@@ -1,3 +1,21 @@
+# quarkus commands build
+## native
+```shell script
+mvnw clean package -Pnative -Dquarkus.native.container-build=true
+SET LAMBDA_ROLE_ARN=arn:aws:iam::336081765760:role/LambdaExecuteRole
+echo edit file
+sh target/manage.sh native create
+```
+
+## niet native
+```shell script
+mvnw clean package
+SET LAMBDA_ROLE_ARN=arn:aws:iam::336081765760:role/LambdaExecuteRole
+echo edit file
+echo change memory + timeout
+sh target/manage.sh create
+```
+
 # quarkus-funqy project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
