@@ -16,7 +16,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int id, String name, String email, Employee supervisor) {
+    public Employee(Integer id, String name, String email, Employee supervisor) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -27,11 +27,11 @@ public class Employee {
         this.name = name;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
