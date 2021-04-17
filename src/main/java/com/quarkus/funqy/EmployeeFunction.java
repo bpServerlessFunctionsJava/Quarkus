@@ -10,7 +10,7 @@ public class EmployeeFunction {
     EmployeeRepository employeeRepository;
 
     @Funq()
-    public Iterable<Employee> getEmployees(Input input) {
+    public Iterable<Employee> getEmployees(String input) {
         return employeeRepository.findAll();
     }
 }
